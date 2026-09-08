@@ -51,7 +51,7 @@ flowchart LR
 3. The first-login page shows your Org ID and agent token, and offers a **Download agent config.json** button pre-filled with the server address and certificate settings.
 4. Install the agent on each host to monitor, drop the downloaded `config.json` into its folder, and start the agent service. Data appears on the dashboard within a minute.
 
-Full details — configuration reference, authentication modes, SSL certificates, backups — are in the [documentation]([docs/](https://qondamonitor.com/help/aio)).
+Full details — configuration reference, authentication modes, SSL certificates, backups — are in the [documentation](https://qondamonitor.com/help/aio).
 
 ## Related components
 
