@@ -49,34 +49,9 @@ flowchart LR
 
 Full details — configuration reference, authentication modes, SSL certificates, backups — are in the [documentation](docs/) (Docsify site; serve the `docs/` folder with any static web server, or read the markdown directly starting at [docs/index.md](docs/index.md)).
 
-## Building from source
-
-The server is a [B4J](https://www.b4x.com/b4j.html) project (`qonda_monitor_aio.b4j`).
-
-**Requirements**
-
-- B4J with **JDK 21** (the project pins `#JavaCompilerPath`; ArcadeDB requires Java 21+)
-- Standard B4X libraries: jServer/UndertowServer, jSQL, HikariCP, JSON, jNet, jShell, JavaObject, jUtilities, and friends (see the project's library list)
-- In-house libraries in the B4J Additional Libraries folder:
-  - **ArcadeDB** — B4J wrapper for embedded ArcadeDB (ships with the engine jars)
-  - **ResultSetConverter / ResultSetUtils** — result-shape and statistics helpers
-  - ABBackgroundWorkers, HttpRequestWrapper, HttpParallel, jTokenManager, HTMLSanitize
-- `#AdditionalJar: h2-2.4.240`
-
-Open the project in the B4J IDE and run. In DEBUG mode the app is fully functional (the self-upgrade flow stages but skips the service restart); a first run creates `config.json`, both databases, and the self-signed certificate automatically.
-
-**Key source documents**
-
-| File | Purpose |
-|---|---|
-| [ARCADE_SCHEMA.md](ARCADE_SCHEMA.md) | The storage contract — document types, indexes, and query patterns every module codes against |
-| [PLAN.md](PLAN.md) | Build history: the server/UI consolidation and the IoTDB → ArcadeDB migration |
-| [UPGRADE_PLAN.md](UPGRADE_PLAN.md) | Design of the in-place self-upgrade mechanism |
-
 ## Related components
 
 - **Qonda Monitor Agent** — the per-host collector (separate project); talks to this server over the `/upload` multipart API
-- **ArcadeDB B4J wrapper** — the embedded-database library this server is built on (separate project)
 
 ## License
 
