@@ -4,6 +4,10 @@ Infrastructure monitoring for **ArcGIS Enterprise** and **FME** environments —
 
 Qonda Monitor AIO is the all-in-one successor to the original split server/UI stack: one application that ingests agent uploads, stores everything in embedded databases, serves the web dashboard, and runs the alerting engine. There is nothing else to install — no external time-series database, no separate UI service, and a fresh install needs **zero configuration**.
 
+## Documentation/Help
+
+https://qondamonitor.com/help/aio
+
 ## Features
 
 - **Host metrics** — CPU, memory, disk space and I/O, network throughput, process-level usage broken down by service (ArcGIS Server, Portal, DataStore, FME, IIS)
